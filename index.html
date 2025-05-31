@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GrumpyBum Budget Voice Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>GrumpyBum’s Budget Voice Tracker</h1>
+  <p class="tagline">No Shame. No Blame. Just Fix It.</p>
+
+  <!-- 🟡 Salary Input Section -->
+  <div class="salary-section">
+    <h2>Set Your Salary</h2>
+    <input type="number" id="salaryInput" placeholder="Enter your salary" />
+    <button onclick="setSalary()">Submit</button>
+    <div id="salaryBreakdown" class="breakdown-output"></div>
+  </div>
+
+  <!-- 🟡 Expense Input Section -->
+  <div class="input-section">
+    <button onclick="startVoice()">🎙 Start Voice Input</button>
+    <input type="text" id="manualInput" placeholder="Or type your expense here..." />
+    <button onclick="addExpense()">➕ Add</button>
+  </div>
+
+  <!-- 🟡 Buckets Display -->
+  <div class="buckets">
+    <h2>Buckets</h2>
+    <ul>
+      <li><strong>Needs:</strong> <span id="needsTotal">0</span></li>
+      <li><strong>Wants:</strong> <span id="wantsTotal">0</span></li>
+      <li><strong>Future:</strong> <span id="futureTotal">0</span></li>
+    </ul>
+  </div>
+
+  <!-- 🟡 Log Output -->
+  <div class="output" id="output"></div>
+
+  <!-- 🟡 Buttons -->
+  <div class="buttons">
+    <button onclick="downloadCSV()">⬇ Download CSV</button>
+    <button onclick="showWeeklySummary()">📊 Weekly Summary</button>
+  </div>
+
+  <!-- 🟡 Weekly Summary Popup -->
+  <div id="weeklyPopup" class="popup hidden">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <h2>Weekly Summary</h2>
+      <p><strong>Needs:</strong> <span id="weeklyNeeds">0</span></p>
+      <p><strong>Wants:</strong> <span id="weeklyWants">0</span></p>
+      <p><strong>Future:</strong> <span id="weeklyFuture">0</span></p>
+    </div>
+  </div>
+
+  <!-- 🟡 Script -->
+  <script src="script.js"></script>
+</body>
+</html>

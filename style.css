@@ -1,0 +1,158 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  background-color: #f4f4f4;
+  color: #333;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  color: #3a3a3a;
+  margin-top: 80px;
+}
+
+.tagline {
+  text-align: center;
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* 🟢 Avatar Top Right */
+.avatar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-align: center;
+  font-size: 0.75em;
+  color: #666;
+}
+
+.avatar img {
+  width: 80px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+/* 🟢 Salary Input Section */
+.salary-section {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.salary-section input[type="number"] {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 50%;
+}
+
+.breakdown-output {
+  margin-top: 10px;
+  font-size: 0.95em;
+  color: #333;
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.buckets {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.buckets ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.buckets li {
+  padding: 5px 0;
+  font-size: 1.1em;
+}
+
+.output {
+  margin-top: 30px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  min-height: 100px;
+}
+
+/* ✅ Weekly Summary Popup Styles */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  width: 80%;
+  max-width: 400px;
+  position: relative;
+}
+
+.popup .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+}
