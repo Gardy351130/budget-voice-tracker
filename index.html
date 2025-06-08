@@ -15,8 +15,9 @@
     <h2>Set Your Salary</h2>
     <input type="number" id="salaryInput" placeholder="Enter your salary" />
     <button onclick="setSalary()">Submit</button>
-    <div id="salaryBreakdown" class="breakdown-output"></div>
   </div>
+
+  <div id="salaryBreakdown" class="breakdown-output visible-box"></div>
 
   <!-- 🟡 Expense Input Section -->
   <div class="input-section">
@@ -25,14 +26,30 @@
     <button onclick="addExpense()">➕ Add</button>
   </div>
 
-  <!-- 🟡 Buckets Display -->
+  <!-- 🟡 Buckets Display and Visual Sliders -->
   <div class="buckets">
     <h2>Buckets</h2>
-    <ul>
-      <li><strong>Needs:</strong> <span id="needsTotal">0</span></li>
-      <li><strong>Wants:</strong> <span id="wantsTotal">0</span></li>
-      <li><strong>Future:</strong> <span id="futureTotal">0</span></li>
-    </ul>
+    <div class="bucket-container">
+      <ul>
+        <li><strong>Needs:</strong> <span id="needsTotal">0</span></li>
+        <li><strong>Wants:</strong> <span id="wantsTotal">0</span></li>
+        <li><strong>Future:</strong> <span id="futureTotal">0</span></li>
+      </ul>
+      <div class="sliders">
+        <div class="bar-wrapper">
+          <div class="bar needs-bar" id="needsBar"></div>
+          <label>Needs</label>
+        </div>
+        <div class="bar-wrapper">
+          <div class="bar wants-bar" id="wantsBar"></div>
+          <label>Wants</label>
+        </div>
+        <div class="bar-wrapper">
+          <div class="bar future-bar" id="futureBar"></div>
+          <label>Future</label>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- 🟡 Log Output -->
@@ -54,6 +71,15 @@
       <p><strong>Future:</strong> <span id="weeklyFuture">0</span></p>
     </div>
   </div>
+
+  <!-- ✅ Tooltip -->
+  <div id="tooltip" class="tooltip-popup hidden"></div>
+
+  <!-- 🟡 Script -->
+  <script src="script.js"></script>
+</body>
+</html>
+
 
   <!-- 🟡 Script -->
   <script src="script.js"></script>
