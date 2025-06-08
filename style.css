@@ -22,27 +22,10 @@ h1 {
   margin-bottom: 30px;
 }
 
-/* 🟢 Avatar Top Right */
-.avatar {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  text-align: center;
-  font-size: 0.75em;
-  color: #666;
-}
-
-.avatar img {
-  width: 80px;
-  border-radius: 50%;
-  margin-bottom: 5px;
-}
-
-/* 🟢 Salary Input Section */
 .salary-section {
   background-color: #fff;
   padding: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -57,10 +40,15 @@ h1 {
   width: 50%;
 }
 
-.breakdown-output {
-  margin-top: 10px;
+.breakdown-output,
+.visible-box {
+  background-color: #fff;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
   font-size: 0.95em;
   color: #333;
+  line-height: 1.5;
 }
 
 .input-section {
@@ -99,14 +87,49 @@ button:hover {
   border-radius: 5px;
 }
 
+.bucket-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
 .buckets ul {
   list-style: none;
   padding-left: 0;
+  flex: 1;
 }
 
 .buckets li {
   padding: 5px 0;
   font-size: 1.1em;
+}
+
+.sliders {
+  display: flex;
+  gap: 15px;
+  align-items: flex-end;
+}
+
+.bar-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bar {
+  width: 30px;
+  height: 120px;
+  background-color: #ddd;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+.bar-wrapper label {
+  margin-top: 5px;
+  font-size: 0.9em;
 }
 
 .output {
@@ -118,6 +141,114 @@ button:hover {
 }
 
 /* ✅ Weekly Summary Popup Styles */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: #fff;
+  p
+
+
+}
+
+.slider-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end; /* Push sliders downward */
+  height: 250px; /* Adds space for the label + vertical slider */
+  padding-top: 40px; /* Extra spacing to move it down further */
+}
+
+
+}
+
+/* This makes it truly vertical and supports all modern browsers */
+.vertical-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 200px;
+  height: 30px;
+  transform: rotate(-90deg);
+  background: #ccc;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+/* Needs (green) */
+#needsSlider {
+  background: linear-gradient(to right, #4caf50, #81c784);
+}
+#needsSlider::-webkit-slider-thumb {
+  background: #2e7d32;
+  border: 2px solid #1b5e20;
+}
+#needsSlider::-moz-range-thumb {
+  background: #2e7d32;
+  border: 2px solid #1b5e20;
+}
+
+/* Wants (orange) */
+#wantsSlider {
+  background: linear-gradient(to right, #ff9800, #ffcc80);
+}
+#wantsSlider::-webkit-slider-thumb {
+  background: #ef6c00;
+  border: 2px solid #e65100;
+}
+#wantsSlider::-moz-range-thumb {
+  background: #ef6c00;
+  border: 2px solid #e65100;
+}
+
+/* Future (blue) */
+#futureSlider {
+  background: linear-gradient(to right, #2196f3, #90caf9);
+}
+#futureSlider::-webkit-slider-thumb {
+  background: #1976d2;
+  border: 2px solid #0d47a1;
+}
+#futureSlider::-moz-range-thumb {
+  background: #1976d2;
+  border: 2px solid #0d47a1;
+}
+
+/* Thumb common */
+.vertical-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.vertical-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Track common */
+.vertical-slider::-webkit-slider-runnable-track,
+.vertical-slider::-moz-range-track {
+  height: 30px;
+  border-radius: 10px;
+}
+
+/* ✅ Popup */
 .popup {
   position: fixed;
   top: 0;
@@ -156,3 +287,4 @@ button:hover {
 }
 
 }
+
